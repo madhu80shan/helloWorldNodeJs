@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Installing Node...
+      - npm install
+  pre_build:
+    commands:
+      - echo Installing Node...
+      - npm install -g express
+      - npm install -g express-generator
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Compiling the Node.js code
+      - node hello-world-server.js   
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - hello-world-server.js
