@@ -15,7 +15,6 @@ phases:
       - echo Build started on `date`
       - echo Compiling the Node.js code
       - node hello-world-server.js
-      - killall node
   post_build:
     commands:
       - echo Build completed on `date`
